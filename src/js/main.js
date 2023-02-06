@@ -21,13 +21,13 @@ E.init({
 const TAM = 60;
 let bolinhas = [];
 for(let i = 0; i <TAM; ++i) {
-    bolinhas.push(new E.Bolinha(canvas.width/2, canvas.height/2, i));
+    bolinhas.push(new E.Bolinha(canvas.width/2, canvas.height/2));
 }
 
 //Adicionando controles
 const ctr = {pause:false, value: 20}
 gui.add(ctr, 'pause');
-gui.add(ctr, 'value', 1, 25, 0.01);
+//gui.add(ctr, 'value', 1, 25, 0.01);
 
 
 //funcão principal
@@ -39,7 +39,7 @@ function animate() {
     // Limpa a tela
     ctx.beginPath();
     ctx.rect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = 'hsla(60, 100%, 15%, 0.3)';
+    ctx.fillStyle = 'hsla(204, 20%, 15%, 0.1)';
     ctx.fill();
 
     //Atualiza as bolinhas

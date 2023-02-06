@@ -25,8 +25,11 @@ function init(_bordas){
     bordas.minY = _bordas.minY;
 }
 
-const Bolinha = function (initPosX, initPosY, id, cor, raio) {
-    this.id = id;
+let global_id = 0;
+
+const Bolinha = function (initPosX, initPosY, cor, raio) {
+    this.id = global_id;
+    global_id += 1;
     this.raio = raio ? raio : 7;
     this.autoAssign = cor === null || cor === undefined;
     this.cor = cor ? cor : 'red';
